@@ -34,7 +34,6 @@ Pokedex System er en simpel applikation, der giver brugere mulighed for at admin
 
 ## **Installation**
 ### **Forudsætninger**
-- .NET Framework version 5.0 eller nyere.
 - Følgende filer skal oprettes og placeres korrekt:
   - **`Pokedexlogins.txt`**: Indeholder brugernavn og hashede passwords.
   - **`PokemonDokument.txt`**: Indeholder Pokémon-data i tekstformat.
