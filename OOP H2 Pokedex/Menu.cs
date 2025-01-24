@@ -16,45 +16,68 @@ namespace OOP_H2_Pokedex
         {
             int currentId = this.currentId();
             Pokemons = new List<string>
-            {
-                $"Id:{++currentId},Navn:bulbasaur,type:Plant,Styrke:40",
-                $"Id:{++currentId},Navn:Squirtle,type:Vand,Styrke:100",
-                $"Id:{++currentId},Navn:Charmander,type:Ild,Styrke:80",
-                $"Id:{++currentId},Navn:lucasTheMikuLover,type:Ild,Styrke:300"
-            };
+                {
+                    $"Id:{++currentId},Navn:bulbasaur,type:Plant,Styrke:40",
+                    $"Id:{++currentId},Navn:Squirtle,type:Vand,Styrke:100",
+                    $"Id:{++currentId},Navn:Charmander,type:Ild,Styrke:80",
+                    $"Id:{++currentId},Navn:lucasTheMikuLover,type:Ild,Styrke:300"
+                };
         }
 
         public void logedInMenu()
         {
+            string[] options = { "Tilføj pokemon", "Se pokemons", "Søg på pokemons", "Rediger pokemon", "Slet pokemons", "Log ud" };
+            int selectedIndex = 0;
+
             while (true)
             {
-                Console.WriteLine("a: tilføj pokemon, b: se pokemons, c:søg på pokemons, d: rediger pokemon, e: slet pokemons, f: log ud");
-                var Valg = Console.ReadLine();
-                LogInMetode menuPunkter = new LogInMetode();
-                switch (Valg.ToLower())
+                Console.Clear();
+                Console.WriteLine("Brug piletasterne til at navigere og Enter for at vælge:");
+                for (int i = 0; i < options.Length; i++)
                 {
-                    case "a":
-                        tilføjPokemon();
-                        break;
-                    case "b":
-                        sePokemons();
-                        break;
-                    case "c":
-                        søgPokemon();
-                        break;
-                    case "d":
-                        RedigerPokemon();
-                        break;
-                    case "e":
-                        sletPokemon();
-                        break;
-                    case "f":
-                        Console.WriteLine("Du er nu logget ud");
-                        Environment.Exit(0);
-                        break;
-                    default:
-                        Console.WriteLine("Ugyldigt valg");
-                        break;
+                    if (i == selectedIndex)
+                    {
+                        Console.WriteLine($"> {options[i]}");
+                    }
+                    else
+                    {
+                        Console.WriteLine($"  {options[i]}");
+                    }
+                }
+
+                var key = Console.ReadKey();
+                if (key.Key == ConsoleKey.UpArrow)
+                {
+                    selectedIndex = (selectedIndex == 0) ? options.Length - 1 : selectedIndex - 1;
+                }
+                else if (key.Key == ConsoleKey.DownArrow)
+                {
+                    selectedIndex = (selectedIndex == options.Length - 1) ? 0 : selectedIndex + 1;
+                }
+                else if (key.Key == ConsoleKey.Enter)
+                {
+                    switch (selectedIndex)
+                    {
+                        case 0:
+                            tilføjPokemon();
+                            break;
+                        case 1:
+                            sePokemons();
+                            break;
+                        case 2:
+                            søgPokemon();
+                            break;
+                        case 3:
+                            RedigerPokemon();
+                            break;
+                        case 4:
+                            sletPokemon();
+                            break;
+                        case 5:
+                            Console.WriteLine("Du er nu logget ud");
+                            Environment.Exit(0);
+                            break;
+                    }
                 }
             }
         }
