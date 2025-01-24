@@ -9,8 +9,20 @@ namespace OOP_H2_Pokedex
 {
     internal class Menu
     {
-        string PokemonsDokument = @"C:\Users\josef\Documents\PokemonDokument.txt";
-        public List<string> Pokemons = new List<string> { "Id:1,Navn:bulbasaur,type:Plant,Styrke:40", "Id:2,Navn:Squirtle,type:Vand,Styrke:100", "Id:3,Navn:Charmander,type:Ild,Styrke:80", "Id:4,Navn:lucasTheMikuLover,type:Ild,Styrke:300" };
+        string PokemonsDokument = @"C:\Users\josef\source\repos\OOP H2 Pokedex\OOP H2 Pokedex\PokemonDokument.txt";
+        public List<string> Pokemons;
+
+        public Menu()
+        {
+            int currentId = this.currentId();
+            Pokemons = new List<string>
+            {
+                $"Id:{++currentId},Navn:bulbasaur,type:Plant,Styrke:40",
+                $"Id:{++currentId},Navn:Squirtle,type:Vand,Styrke:100",
+                $"Id:{++currentId},Navn:Charmander,type:Ild,Styrke:80",
+                $"Id:{++currentId},Navn:lucasTheMikuLover,type:Ild,Styrke:300"
+            };
+        }
 
         public void logedInMenu()
         {

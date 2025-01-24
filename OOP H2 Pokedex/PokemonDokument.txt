@@ -1,0 +1,2 @@
+﻿Id:1,Navn:bulbasaur,type:Plant,Styrke:40
+Id:1,Navn:bulbasaur,type:Plant,Styrke:40

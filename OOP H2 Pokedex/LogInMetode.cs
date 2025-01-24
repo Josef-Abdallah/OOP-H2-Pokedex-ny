@@ -15,7 +15,7 @@ namespace OOP_H2_Pokedex
 
         public void login()
         {
-            string LoginFile = @"C:\Pokedexlogins.txt";
+            string LoginFile = @"C:\Users\josef\source\repos\OOP H2 Pokedex\OOP H2 Pokedex\Pokedexlogins.txt";
 
             Console.WriteLine("Indtast brugernavn");
             brugernavn = Console.ReadLine();
