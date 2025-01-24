@@ -6,7 +6,7 @@ Pokedex System er en simpel applikation, der giver brugere mulighed for at admin
 ---
 
 ## **Funktioner**
-- **Login**: Brugernavn og SHA-256 hashede passwords valideres fra en tekstfil.
+- **Login**: Brugernavn og SHA-256 hashede passwords valideres fra en tekstfil. (brugernavn: Josef, kode: 1234)
 - **Tilføj Pokémon**: Vælg og tilføj Pokémon fra en foruddefineret liste.
 - **Se Pokémon**: Vis Pokémon med sidestyring for nem navigation.
 - **Søg Pokémon**: Find Pokémon baseret på navn eller type.
