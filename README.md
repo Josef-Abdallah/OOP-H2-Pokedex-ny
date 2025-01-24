@@ -80,8 +80,3 @@ Gæstetilstand giver kun adgang til:
   - **`Pokedexlogins.txt`**: Indeholder brugeroplysninger (brugernavn og password).
   - **`PokemonDokument.txt`**: Indeholder Pokémon-liste i tekstformat.
 
----
-
-## **Licens**
-Projektet er licenseret under MIT License. Se den medfølgende LICENSE-fil for yderligere oplysninger.
-
